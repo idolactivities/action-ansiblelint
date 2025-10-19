@@ -52,7 +52,7 @@ Optional. Additional reviewdog flags.
 
 ### `ansiblelint_version`
 
-Optional. The ansible-lint version to use. Default is `5.3.2`.
+Optional. The ansible-lint version to use. Default is `25.9.2`.
 
 ### `ansiblelint_flags`
 
@@ -75,7 +75,7 @@ jobs:
       - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
       - uses: actions/setup-python@e797f83bcb11b83ae66e0230d6156d7c80228e7c # v6.0.0
         with:
-          python-version: "3.6"
+          python-version: "3.13"
       - name: ansible-lint
         uses: reviewdog/action-ansiblelint@5b8ca4b12dcbcdf63d4739dacd90609abafe8924 # v1.17.0
         with:
@@ -90,7 +90,7 @@ To cache the `ansible`/`ansible-lint` installation, set the `cache` and
 ```yml
       - uses: actions/setup-python@e797f83bcb11b83ae66e0230d6156d7c80228e7c # v6.0.0
         with:
-          python-version: "3.6"
+          python-version: "3.13"
           cache: "pip"
           cache-dependency-path: ".github/workflows/lint.yml"
 ```
